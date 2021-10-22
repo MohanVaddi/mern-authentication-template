@@ -5,12 +5,16 @@ const app = express();
 dotenv.config();
 const PORT = process.env['PORT'] || 3000;
 
+//cors
+import cors from 'cors';
+
 // importing routes from routes files.
 import usersRoute from './routes/api/users';
 import authRoute from './routes/api/auth';
 import postsRoute from './routes/api/posts';
 import profileRoute from './routes/api/profile';
 
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

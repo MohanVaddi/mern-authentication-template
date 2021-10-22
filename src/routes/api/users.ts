@@ -15,7 +15,7 @@ const router = express.Router();
 router.post(
     '/',
     [
-        check('name', 'Name is requires').not().isEmpty(),
+        check('name', 'Name is required').not().isEmpty(),
         check('email', 'Please enter a valid email').isEmail(),
         check(
             'password',
@@ -59,7 +59,7 @@ router.post(
             });
             await user.save();
 
-            // *return jsonwebtoken
+            // * return jsonwebtoken
 
             const payload = {
                 user: {

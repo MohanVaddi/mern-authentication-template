@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-        "build": "tsc",
+        "build": "rm -rf build/ && tsc",
         "start": "build/index.js"
     },
     "author": "Mohan Vaddi <myselfgeek01@gmail.com>",
